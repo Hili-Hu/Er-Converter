@@ -1,7 +1,9 @@
 import { Resend } from 'resend'
 import { createClerkClient } from '@clerk/nextjs/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 async function generateLoveLetter(userName: string): Promise<string> {
   const res = await fetch('https://api.kie.ai/gemini/v1/models/gemini-3-flash-v1betamodels:streamGenerateContent', {
@@ -23,7 +25,7 @@ async function generateLoveLetter(userName: string): Promise<string> {
 }
 
 export async function sendWelcomeEmail(userEmail: string, userName: string) {
-  await resend.emails.send({
+  await getResend().emails.send({
     from: 'Tomie-fy <hello@bestskills.top>',
     to: userEmail,
     subject: '您有一封来自黑白世界的邀请函',
@@ -40,7 +42,7 @@ export async function sendWelcomeEmail(userEmail: string, userName: string) {
 
 export async function sendDailyLoveLetter(userEmail: string, userName: string) {
   const loveLetter = await generateLoveLetter(userName)
-  await resend.emails.send({
+  await getResend().emails.send({
     from: 'Tomie-fy <hello@bestskills.top>',
     to: userEmail,
     subject: `早安 ${userName}，今天也想你了`,

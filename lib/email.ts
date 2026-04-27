@@ -32,7 +32,7 @@ export async function sendWelcomeEmail(userEmail: string, userName: string) {
     html: `
       <div style="font-family: sans-serif; max-width: 500px; margin: 0 auto;">
         <h2>Hi ${userName}，欢迎来到漩涡镇！</h2>
-        <p>您在网页端提交的照片已转化成功。我们为您保留了最细腻的排线与最诡谲的影调，请点击下方链接查看您的漫画替身</p>
+        <p>您在网页端提交的照片已转化成功。我们为您保留了最细腻的排线与最诡谲的影调，<a href="https://bestskills.top">点击这里查看您的漫画替身</a></p>
         <br/>
         <p>—— Tomie-fy</p>
       </div>

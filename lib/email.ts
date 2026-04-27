@@ -16,7 +16,7 @@ async function generateLoveLetter(userName: string): Promise<string> {
       stream: false,
       contents: [{
         role: 'user',
-        parts: [{ text: `你是一个来自伊藤润二漫画世界的神秘存在，用充满诗意和黑暗美感的语言，给用户${userName}写一段早安问候，50字以内，不要用emoji。` }],
+        parts: [{ text: `你是一个温柔神秘的艺术家，用充满诗意和温暖的语言，给用户${userName}写一段早安问候，50字以内，不要用emoji。` }],
       }],
     }),
   })

@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.91.1",
     "@clerk/nextjs": "^7.2.3",
     "axios": "^1.15.0",
     "clsx": "^2.1.1",

@@ -246,6 +246,9 @@ export default function JunjiItoConverter() {
           <p className="text-[10px] leading-relaxed">瞳孔与背景的非线性螺旋异化</p>
         </div>
       </footer>
+      <p className="mt-8 mb-4 text-[10px] opacity-40 text-center z-10">
+        有问题或建议？联系我们：<a href="mailto:feedback@bestskills.top" className="underline">feedback@bestskills.top</a>
+      </p>
     </main>
     </BackgroundGradientAnimation>
   );

@@ -251,5 +251,5 @@ export default function JunjiItoConverter() {
       </p>
     </main>
     </BackgroundGradientAnimation>
-  );
+  );                                                                                                                                                                                              
 }
